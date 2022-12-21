@@ -48,3 +48,8 @@
     width: 100%;
     background-color: none;
 }
+#popUpCloseBtn{
+    background-color: rgb(230, 50, 50);
+    border: none;
+    border-radius: 4px;
+}
