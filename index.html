@@ -26,7 +26,10 @@
        <input name="AddBookBtn" id="AddBookBtn" class="btn btn-primary  view shadow class" type="button" value="+ Add Book">
        <div id="popup-card" class="card" style="display: none;">
         <div class="card-body" id="popup-card-div">
-          <div><h1>Add New Book</h1></div>
+            <div class="closeButtonDiv">
+            <button type="reset" id="popUpCloseBtn">X</button>
+        </div>
+          <div><h1>Add New Book</h1></div><span>
           <br>
           <div>
             <div class="mb-3">
@@ -36,7 +39,7 @@
                 <input type="text"
                 class="form-control" name="" id=""  placeholder="Author">
                 <br>
-                <input type="text"
+                <input type="number"
                 class="form-control" name="" id=""  placeholder="Pages">
                 <br>
                 <div><h3>Have you read it?</h3><div class="form-check">
