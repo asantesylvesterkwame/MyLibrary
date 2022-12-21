@@ -12,5 +12,14 @@
     border: 1px solid rgb(68, 68, 68);
 }
 .card-body{
+    display: flex;
+    justify-content: center;
+}
+#AddBookBtn{
+    background-color: rgb(56, 133, 56);
+}
+.card-footer{
+    display: flex;
+    justify-content: center;
     
 }
