@@ -30,6 +30,7 @@
     transform: translate(-50%, -50%);
     z-index: 999;
     background-color: silver;
+    transition: all 0.5s ease;
   }
 #popup-card-div{
     display: flex;
@@ -40,4 +41,11 @@
 #BookSubmit{
     width: 100%;
     background-color: rgb(56, 133, 56);
+}
+.closeButtonDiv{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    background-color: none;
+
 }
