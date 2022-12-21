@@ -10,5 +10,6 @@ popUpCloseBtn.addEventListener('click', function () {
     popUpCard.style.display = 'none';
 });
 
-
+let bookTitle = document.getElementById('bookTitle').value;
+console.log(bookTitle);
 
