@@ -32,23 +32,25 @@
           <div><h1>Add New Book</h1></div><span>
           <br>
           <div>
+            <form id="form-id" class="form">
             <div class="mb-3">
               <input type="text"
-                class="form-control" name="" id="booktitle" placeholder="Title">
+                class="form-control" name="" id="bookTitle" placeholder="Title" value="" required>
                 <br>
                 <input type="text"
-                class="form-control" name="" id=""  placeholder="Author">
+                class="form-control" name="" id="bookAuthor"  placeholder="Author" value="" required>
                 <br>
                 <input type="number"
-                class="form-control" name="" id=""  placeholder="Pages">
+                class="form-control" name="" id="bookPages"  placeholder="Pages" value="" required>
                 <br>
-                <div><h3>Have you read it?</h3><div class="form-check">
-                    <input class="form-check-input" name="" id="" type="checkbox" value="checkedValue" aria-label="Text for screen reader">
-                </div>
-                <div>
-                    <input name="BookSubmit" id="BookSubmit" class="btn btn-primary" type="button" value="Submit">
-                </div>
+                <h3>Have you read it?</h3>
+                    <input class="form-check-input" name="" id="" type="checkbox" value="checkedValue" aria-label="Text for screen reader" >
+                
+               <div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                
             </div>
+        </form>
             </div>
           </div>
         </div>
