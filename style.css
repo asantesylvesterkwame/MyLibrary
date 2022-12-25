@@ -4,6 +4,7 @@
 }
 .card-header{
     display: flex;
+    justify-content: center;
     justify-content: space-between;
     box-shadow: 1px 2px 4px;
 }
@@ -12,8 +13,11 @@
     border: 1px solid rgb(68, 68, 68);
 }
 .card-body{
-    display: flex;
-    justify-content: center;
+    /* display: flex;*/
+    /* justify-content: center; */
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 #AddBookBtn{
     background-color: rgb(56, 133, 56);
@@ -52,4 +56,37 @@
     background-color: rgb(230, 50, 50);
     border: none;
     border-radius: 4px;
+}
+#card-footer{
+    border:  none;
+}
+#bookInfoDiv{
+
+    /* background-color: black; */
+    
+
+}
+.card{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.bookCard{
+    flex-direction: column;
+}
+.card>img{
+    width: 25%;
+    height: auto;
+}
+.cardInfoBody{
+    display: block;
+}
+.cardInfoBody>.unread{
+    width: 100%;
+    background-color: rgb(56, 133, 56);
+}
+.cardInfoBody>.removeBook{
+    width: 100%;
+    background-color: rgb(230, 50, 50);
 }
