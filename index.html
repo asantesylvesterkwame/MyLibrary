@@ -18,18 +18,19 @@
 <body>
    <div class="card">
     <div class="card-header">
-        <div><h1>LIBRARY MAN</h1></div>
+        <div id="mainLogo"><h1>LIBRARY MAN</h1></div>
         <div class="addBtnDiv" style="height: 5%;"><button name="AddBookBtn" id="AddBookBtn" class="btn btn-primary  view shadow class" type="button" >+ Add Book</button></div>
         <div class="loginButton"><input name="loginButton" id="loginButton" class="btn btn-primary" type="button" value="Log In"></div>
     </div>
-    <div class="card-body" style="height: 100vh;" id="cardBody" >
-        <div class="card text-center" style="display: none;">
+    <div class="card-body" style="height: 100vh;"  >
+        <div class="card text-center" style="display: none;"  id="cardBody">
           <img class="card-img-top" src="user.png" alt="Title">
           <div class="card-body cardInfoBody" >
-            <h4 class="card-title"></h4>
-            <p class="card-text"></p>
+            <h4 class="card-title" id="cardInfoTitle"></h4>
+            <p class="card-text" id="cardInfoAuthor"></p>
+            <p class="card-text" id="cardInfoPages"></p>
             <input type="submit" class="btn btn-primary unread" value="Unread">
-            <input type="submit" class="btn btn-primary submit removeBook"  value="read">
+            <input type="submit" class="btn btn-primary submit removeBook" id="removeBook" value="Remove Book">
         </div>
         </div>
       
@@ -48,19 +49,19 @@
             <form id="form-id" class="form">
             <div class="mb-3">
               <input type="text"
-                class="form-control" name="" id="bookTitle" placeholder="Title" value="" required>
+                class="form-control" name="" id="bookTitle" placeholder="Title"  required>
                 <br>
                 <input type="text"
-                class="form-control" name="" id="bookAuthor"  placeholder="Author" value="" required>
+                class="form-control" name="" id="bookAuthor"  placeholder="Author"  required>
                 <br>
                 <input type="number"
-                class="form-control" name="" id="bookPages"  placeholder="Pages" value="" required>
+                class="form-control" name="" id="bookPages"  placeholder="Pages"  required>
                 <br>
                 <h3>Have you read it?</h3>
                     <input class="form-check-input" name="checkbox" id="checkbox" type="checkbox" value="" aria-label="Text for screen reader" >
                 
                <div>
-                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                    <input type="submit" class="btn btn-primary" id="submit">
                 
             </div>
         </form>
