@@ -60,12 +60,6 @@
 #card-footer{
     border:  none;
 }
-#bookInfoDiv{
-
-    /* background-color: black; */
-    
-
-}
 .card{
     display: flex;
     justify-content: center;
