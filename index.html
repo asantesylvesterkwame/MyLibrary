@@ -22,21 +22,19 @@
         <div class="addBtnDiv" style="height: 5%;"><button name="AddBookBtn" id="AddBookBtn" class="btn btn-primary  view shadow class" type="button" >+ Add Book</button></div>
         <div class="loginButton"><input name="loginButton" id="loginButton" class="btn btn-primary" type="button" value="Log In"></div>
     </div>
-    <div class="card-body" style="height: 100vh;"  >
+    <div class="card-body" style="height: 100vh;" id="card-body" >
         <div class="card text-center" style="display: none;"  id="cardBody">
-          <img class="card-img-top" src="user.png" alt="Title">
+          <img class="card-img-top" src="book.png" alt="Title">
           <div class="card-body cardInfoBody" >
             <h4 class="card-title" id="cardInfoTitle"></h4>
             <p class="card-text" id="cardInfoAuthor"></p>
             <p class="card-text" id="cardInfoPages"></p>
-            <input type="submit" class="btn btn-primary unread" value="Unread">
+            <button type="button" class="btn btn-primary unread"  id="unreadBtn">Unread</button>
             <input type="submit" class="btn btn-primary submit removeBook" id="removeBook" value="Remove Book">
         </div>
         </div>
       
-       <div id="bookInfoDiv">
-        
-    </div>
+    
        <div id="popup-card" class="card" style="display: none;">
         <div class="card-body" id="popup-card-div">
             <div class="closeButtonDiv">
