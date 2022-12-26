@@ -18,6 +18,7 @@
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 5%;
 }
 #AddBookBtn{
     background-color: rgb(56, 133, 56);
@@ -78,7 +79,7 @@
 }
 .cardInfoBody>.unread{
     width: 100%;
-    background-color: rgb(56, 133, 56);
+    background-color: rgb(184, 163, 48);
 }
 .cardInfoBody>.removeBook{
     width: 100%;
