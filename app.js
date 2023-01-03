@@ -164,7 +164,6 @@ function addBookInfo(e) {
     e.preventDefault();
 
     let isFormValid = formElements.checkValidity();
-    // alert(isFormValid);
     if(!isFormValid) {
         formElements.reportValidity();
     } else {
