@@ -13,10 +13,15 @@ let body = document.body
 // let cardInfoPages = document.getElementById('cardInfoPages');
 // let removeBookBtn = document.getElementById('removeBook');
 const formElements = document.createElement('form');
+let unreadButton = document.createElement('button');
 
 
 addBookButton.addEventListener('click', function () {
     // popUpCard.style.display = 'block';
+    // const videoOverlay = document.createElement('div')
+    // body.append(videoOverlay);
+    // videoOverlay.style.cssText = 'width: 100vw; height: 100vh; background: black; opacity: 50%;'
+
     const bookAddPopUp = document.createElement('div');
     bookAddPopUp.setAttribute('id','popup-card-div');
     bookAddPopUp.setAttribute('class', 'card-body');
@@ -106,7 +111,18 @@ addBookButton.addEventListener('click', function () {
 
     popUpSubmitBtn.addEventListener('click', addBookInfo);
 
+    bookReadStatus.addEventListener('change', function (e) {
+        if (bookReadStatus.checked) {
+            console.log(unreadButton);
+            unreadButton.style.cssText = 'background-color: green;'
+            unreadButton.innerHTML = 'Read'
+        }else{
+            unreadButton.style.cssText = 'background-color: rgb(184, 163, 48);'
+            unreadButton.innerHTML = 'Unread'
     
+        }
+    
+    }, false)
 
 // popUpCloseBtn.addEventListener('click', function () {
 //     // popUpCard.style.display = 'none';
@@ -141,18 +157,7 @@ addBookButton.addEventListener('click', function () {
 //     }
 //     removeBookBtn.addEventListener('click', deleteBook);
 
-//     let unreadBtn = document.getElementById('unreadBtn');
-// checkBox.addEventListener('change', function (e) {
-//     if (checkBox.checked) {
-//         unreadBtn.style.cssText = 'background-color: green;'
-//         unreadBtn.innerHTML = 'Read'
-//     }else{
-//         unreadBtn.style.cssText = 'background-color: rgb(184, 163, 48);'
-//         unreadBtn.innerHTML = 'Unread'
-
-//     }
-
-// }, false)
+    
 // }
 
 
@@ -169,8 +174,8 @@ function addBookInfo(e) {
     } else {
         e.preventDefault();
         let cardBodyMain = document.getElementById('card-body');
-    
-
+        
+        popUpCard.style.display = 'none'
     let bookCardInfoDiv = document.createElement('div');
     bookCardInfoDiv.setAttribute('class', 'card text-center');
     bookCardInfoDiv.style.cssText = 'display: block;'    
@@ -205,17 +210,15 @@ function addBookInfo(e) {
     let bookPagesValue = document.getElementById('bookPages').value;
     bookInfoPages.innerHTML = bookPagesValue;
 
-    let unreadBtn = document.createElement('button');
-    bookInfoTextDiv.appendChild(unreadBtn);
-    unreadBtn.setAttribute('class', 'btn btn-primary unread');
-    unreadBtn.setAttribute('type', 'button');
-    unreadBtn.addEventListener('click', function () {
+    bookInfoTextDiv.appendChild(unreadButton);
+    unreadButton.setAttribute('class', 'btn btn-primary unread');
+    unreadButton.setAttribute('type', 'button');
+    unreadButton.addEventListener('click', function () {
         console.log('hello');
-        unreadBtn.addEventListener('click', function () {
+        unreadButton.addEventListener('click', function () {
             console.log('hii');
         })
     })
-    unreadBtn.innerHTML = 'Unread';
 
 
     let removeBookBtn = document.createElement('button');
