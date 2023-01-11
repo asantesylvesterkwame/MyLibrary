@@ -130,3 +130,8 @@ unreadButton.addEventListener('click', function () {
 });
 
 }
+let popUpCloseBtn = document.getElementById('popUpCloseBtn');
+
+popUpCloseBtn.addEventListener('click', function () {
+    popUpCard.style.display = 'none'
+})
