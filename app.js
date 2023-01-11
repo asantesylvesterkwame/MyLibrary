@@ -1,3 +1,5 @@
+
+
 let myLibrary = [];
 
 function Book(title, author, numberOfPages, readStatus) {
@@ -85,9 +87,12 @@ function SubmitBtnFunction (e) {
 
     let unreadButton = document.createElement('input');
     unreadButton.setAttribute('class', 'btn btn-primary unread');
-    unreadButton.setAttribute('id', 'unreadButton');
+    unreadButton.setAttribute('id', '1');
+    // unreadButton.setAttribute('name')
     unreadButton.setAttribute('type', 'button');
     cardInfoBody.appendChild(unreadButton);
+    let unreadButtonId = unreadButton.id;
+    console.log(unreadButtonId);
 
     let removeBook = document.createElement('input');
     removeBook.setAttribute('class', 'btn btn-primary submit removeBook');
@@ -105,5 +110,23 @@ function SubmitBtnFunction (e) {
     }
 }
 addBookToLibrary();
+
+removeBook.addEventListener('click', function () {
+    bookCardBody.style.display = 'none'
+    myLibrary.pop(myBookInfo);
+});
+
+
+
+unreadButton.addEventListener('click', function () {
+    if (unreadButton.value === 'Read') {
+        unreadButton.value = 'Unread';
+        unreadButton.style.backgroundColor = ' rgb(209, 184, 41)'
+    } else {
+        unreadButton.value = 'Read';
+        unreadButton.style.backgroundColor = 'green'
+    }
+    
+});
 
 }
